@@ -204,8 +204,9 @@ def main():
     available = []
     for page in pages(token, "/me/playlists", limit=50):
         available += page.get("items", [])
-    listens, reached_cutoff = recent_listens(token, cutoff)
-    print(f"Spotify authenticated. {len(listens)} recent play events retrieved; cutoff reached: {reached_cutoff}")
+    from spotify_history import collect
+    listens, reached_cutoff = collect(token, get, track_data, persist=args.apply, days=7)
+    print(f"Spotify authenticated. {len(listens)} rolling observed play events; collection continuity verified: {reached_cutoff}")
     results = {}
     snapshots_changed = False
     for label, conf in configs.items():
@@ -255,7 +256,7 @@ def main():
         "seven_day_coverage_verified": reached_cutoff,
         "playlists": results,
     }
-    # Dry-run never creates artifacts or commits.
+    # Dry-run never creates artifacts or commits. Encrypted aggregates are persisted by collect only in apply mode.
     if args.apply and snapshots_changed:
         # Only persist evidence of actual state changes (or a first baseline).
         save_json(ROOT / "history" / f"{today}.json", report)
@@ -281,7 +282,7 @@ def main():
         if not report_path.exists() or report_path.read_text() != content:
             report_path.write_text(content)
     if args.apply and not snapshots_changed:
-        print("No playlist state changes; no history files or commit needed")
+        print("No playlist snapshot changes; listening aggregates may still have advanced")
     print(json.dumps(report, indent=2, ensure_ascii=False))
     if all("error" in r for r in results.values()):
         raise RuntimeError("No target playlists were readable; refusing to publish results")
