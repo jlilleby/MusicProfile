@@ -4,6 +4,8 @@ This package runs in `jlilleby/MusicProfile`, branch `main`.
 
 ## Install
 
+The workflow files are already committed to this repository. The original installation instructions below are retained for reference.
+
 Copy `.github/workflows/spotify-weekly.yml`, `scripts/spotify_refresh.py`,
 `scripts/spotify_auth.py`, and `config/playlists.json` into your repo at the same paths.
 Commit those files (NOT any credentials).
@@ -64,6 +66,18 @@ GitHub Actions cron schedules use UTC. This workflow has two Monday cron entries
 DST. GitHub's scheduler may start a run late or even drop one; check the Actions tab.
 Manual runs bypass the time guard. `workflow_dispatch` is read-only by default.
 
+## 30-minute listening collection (added November 2026)
+
+- **Collect Spotify Listening History** runs automatically every 30 minutes and can be run manually under Actions.
+- Each collection reads the available last 50 play events, deduplicates them with secret-keyed hashes, and stores **only per-day song counts** plus keyed deduplication hashes, all encrypted in `data/listening-history.enc.json`.
+- The repository is public: no plaintext individual play events or exact play timestamps are committed. The encryption key is derived from the existing `SPOTIFY_CLIENT_SECRET` GitHub secret; do not disclose it. **Rotating the client secret makes previously encrypted state unreadable unless it is migrated first.**
+- GitHub Actions installs the `cryptography` library. There is no new GitHub secret to configure.
+- Weekly refresh reads the accumulated encrypted listening counts rather than just Spotify's most recent 50 events. The existing Monday 04:00 Europe/Oslo schedule is unchanged.
+- Seven-day coverage requires at least seven days of collection and no polling gap greater than 90 minutes. Even then, Spotify outages, omitted plays, or a very active 30-minute interval can leave gaps.
+- Aggregates use UTC-day buckets, so the first and last day of the weekly window are approximate rather than exact-to-the-minute.
+- The initial week cannot be recovered from Spotify if older plays are no longer exposed. As new events are collected, recommendations become more representative.
+- Scheduled collector runs may create up to approximately 48 small encrypted-state commits per day. GitHub may delay scheduled runs. Both workflows share a concurrency group to avoid overlapping writes.
+
 ## Safety and API limitations
 
 - This repository is **public**. Published snapshots disclose the tracks in your
@@ -76,7 +90,7 @@ Manual runs bypass the time guard. `workflow_dispatch` is read-only by default.
 - If the playlist's owner doesn't match your Spotify account, it won't be edited.
 - If token refresh fails, or Spotify rejects a request, workflow fails rather than
   inventing success.
-- The script uses standard Python libraries and never prints credentials.
+- The scripts use Python 3.12 and the `cryptography` dependency, and never print credentials.
 - Authorization is separate from the ChatGPT Spotify connector. GitHub Actions
   cannot reuse ChatGPT's Spotify tokens.
 - A token rotation may require updating the `SPOTIFY_REFRESH_TOKEN` secret.
