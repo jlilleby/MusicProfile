@@ -29,7 +29,7 @@ def _key():
 
 def _load():
     if not STATE_PATH.exists():
-        return {"events": [], "polls": []}
+        return {"days": {}, "seen": {}, "polls": []}
     obj = json.loads(STATE_PATH.read_text(encoding="utf-8"))
     if obj.get("version") != 1:
         raise RuntimeError("Unknown encrypted listening-history format")
@@ -42,7 +42,7 @@ def _load():
     except Exception as exc:
         raise RuntimeError("Cannot decrypt history: was SPOTIFY_CLIENT_SECRET rotated? Preserve the old secret to recover it.") from exc
     state = json.loads(plaintext)
-    if not isinstance(state.get("events"), list) or not isinstance(state.get("polls"), list):
+    if not isinstance(state.get("days"), dict) or not isinstance(state.get("seen"), dict):
         raise RuntimeError("Invalid decrypted history")
     return state
 
@@ -97,36 +97,66 @@ def _fetch(token, get, track_data):
 
 
 def collect(token, get, track_data, persist=False, days=7):
-    """Return (track events for last days, coverage_verified).
+    """Build track-frequency input from encrypted DAILY aggregates.
 
-    Persist only in apply/collector runs. A seven-day interval is considered
-    covered only if polling spans the period without a >90-minute gap.
+    Never persist exact play timestamps, raw listening events, or plaintext song
+    listening history. Played-at is used in memory solely for deduplication and
+    assignment to a UTC day. A keyed HMAC identifier prevents duplicate counting.
     """
+    import hmac
     now = dt.datetime.now(UTC)
     cutoff = now - dt.timedelta(days=days)
     retain_after = now - dt.timedelta(days=RETENTION_DAYS)
     state = _load()
-    old_count = len(state["events"])
-    current = _fetch(token, get, track_data)
-    by_key = {}
-    for event in state["events"] + current:
-        if _utc(event["played_at"]) >= retain_after:
-            by_key[(event["played_at"], event["track"]["uri"])] = event
-    events = sorted(by_key.values(), key=lambda r: r["played_at"])
+    state.setdefault("polls", [])
+    raw = _fetch(token, get, track_data)
+    existing_days = state["days"]
+    seen = state["seen"]
+    for event in raw:
+        played = _utc(event["played_at"])
+        if played < retain_after:
+            continue
+        day = played.date().isoformat()
+        uri = event["track"]["uri"]
+        fingerprint = hmac.new(
+            _key(), (event["played_at"] + "\x00" + uri).encode(), hashlib.sha256
+        ).hexdigest()
+        day_seen = seen.setdefault(day, [])
+        if fingerprint in day_seen:
+            continue
+        day_seen.append(fingerprint)
+        bucket = existing_days.setdefault(day, {})
+        if uri not in bucket:
+            bucket[uri] = {"track": event["track"], "count": 0}
+        bucket[uri]["count"] += 1
+    for day in list(existing_days):
+        if dt.date.fromisoformat(day) < retain_after.date():
+            del existing_days[day]
+    for day in list(seen):
+        if dt.date.fromisoformat(day) < retain_after.date():
+            del seen[day]
     polls = sorted(set(p for p in state["polls"] if _utc(p) >= retain_after))
     if persist:
         polls.append(now.isoformat())
-        state = {"events": events, "polls": polls}
+        state["polls"] = polls
         _save(state)
-    recent = [event["track"] for event in events if _utc(event["played_at"]) >= cutoff]
+    recent = []
+    for day, songs in existing_days.items():
+        if dt.date.fromisoformat(day) < cutoff.date():
+            continue
+        for row in songs.values():
+            recent.extend([row["track"]] * int(row["count"]))
     polling = sorted(_utc(p) for p in polls)
     in_window = [p for p in polling if p >= cutoff]
     coverage = bool(polling and polling[0] <= cutoff and in_window)
     if coverage:
         points = [max(p for p in polling if p <= cutoff)] + in_window + [now]
-        coverage = all((b - a) <= dt.timedelta(minutes=90) for a, b in zip(points, points[1:]))
+        coverage = all((later - earlier) <= dt.timedelta(minutes=90)
+                       for earlier, later in zip(points, points[1:]))
     if persist:
-        print(f"Encrypted collection saved: {len(current)} fetched, {len(events) - old_count} net retained events, {len(recent)} events in last {days} days; continuous coverage: {coverage}")
+        print(f"Saved encrypted daily aggregates; retrieved {len(raw)} Spotify events; "
+              f"accumulated {len(recent)} plays in the rolling window; "
+              f"poll continuity verified: {coverage}")
     return recent, coverage
 
 
