@@ -1,0 +1,79 @@
+name: Weekly Spotify Playlist Refresh
+
+on:
+  schedule:
+    # 04:00 Europe/Oslo: 03:00 UTC in winter, 02:00 UTC in summer.
+    - cron: '0 2,3 * * 1'
+  workflow_dispatch:
+    inputs:
+      apply_changes:
+        description: 'Actually add songs to Spotify? (default is dry run)'
+        type: boolean
+        required: true
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spotify-playlist-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      TZ: Europe/Oslo
+      SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+      SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+      SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Only run once at 04:00 Oslo time
+        id: time
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          # Compare the triggering UTC cron to the current Oslo UTC offset.
+          # Checking only the current clock hour could run twice if Actions is delayed.
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          elif [ "$(TZ=Europe/Oslo date +%z)" = "+0100" ] && [ "$SCHEDULE" = "0 3 * * 1" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          elif [ "$(TZ=Europe/Oslo date +%z)" = "+0200" ] && [ "$SCHEDULE" = "0 2 * * 1" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Refresh playlists and create reports
+        id: refresh
+        if: steps.time.outputs.run == 'true'
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          APPLY_INPUT: ${{ inputs.apply_changes }}
+        run: |
+          if [ "$EVENT_NAME" = "schedule" ] || [ "$APPLY_INPUT" = "true" ]; then
+            python scripts/spotify_refresh.py --apply
+          else
+            python scripts/spotify_refresh.py --dry-run
+          fi
+      - name: Commit verified snapshots and reports
+        if: steps.refresh.outcome == 'success' && (github.event_name == 'schedule' || inputs.apply_changes == true)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p playlists history reports
+          git add -A -- playlists history reports
+          if git diff --cached --quiet; then
+            echo "No verified file changes to commit"
+            exit 0
+          fi
+          git commit -m "spotify: weekly playlist refresh $(TZ=Europe/Oslo date +%F)"
+          git push
