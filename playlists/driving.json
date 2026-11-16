@@ -1,0 +1,599 @@
+{
+  "snapshot_date": "2026-11-16",
+  "playlist_id": "42XFduXA9oYtRvG8QsrGBZ",
+  "playlist_uri": "spotify:playlist:42XFduXA9oYtRvG8QsrGBZ",
+  "name": "00 | 05 Driving — The Long Way Home",
+  "track_count": 65,
+  "duration_ms": 15479359,
+  "tracks": [
+    {
+      "uri": "spotify:track:4rlWtsOCfxD8u1aCbbaHHp",
+      "name": "Life Is A Highway",
+      "artists": [
+        "Rascal Flatts"
+      ],
+      "duration_ms": 276973,
+      "url": "https://open.spotify.com/track/4rlWtsOCfxD8u1aCbbaHHp"
+    },
+    {
+      "uri": "spotify:track:57bgtoPSgt236HzfBOd8kj",
+      "name": "Thunderstruck",
+      "artists": [
+        "AC/DC"
+      ],
+      "duration_ms": 292333,
+      "url": "https://open.spotify.com/track/57bgtoPSgt236HzfBOd8kj"
+    },
+    {
+      "uri": "spotify:track:0bVtevEgtDIeRjCJbK3Lmv",
+      "name": "Welcome To The Jungle",
+      "artists": [
+        "Guns N' Roses"
+      ],
+      "duration_ms": 272026,
+      "url": "https://open.spotify.com/track/0bVtevEgtDIeRjCJbK3Lmv"
+    },
+    {
+      "uri": "spotify:track:0ViDDXROYN5ITMIfK2qp26",
+      "name": "Run",
+      "artists": [
+        "Snow Patrol"
+      ],
+      "duration_ms": 357453,
+      "url": "https://open.spotify.com/track/0ViDDXROYN5ITMIfK2qp26"
+    },
+    {
+      "uri": "spotify:track:34hKkdMy6Bcq4PWrTtZhme",
+      "name": "Chasing Cars",
+      "artists": [
+        "Snow Patrol"
+      ],
+      "duration_ms": 267960,
+      "url": "https://open.spotify.com/track/34hKkdMy6Bcq4PWrTtZhme"
+    },
+    {
+      "uri": "spotify:track:7EmSPZ9f1AiLR9eVHNSI62",
+      "name": "Brothers In Arms",
+      "artists": [
+        "Dire Straits"
+      ],
+      "duration_ms": 424000,
+      "url": "https://open.spotify.com/track/7EmSPZ9f1AiLR9eVHNSI62"
+    },
+    {
+      "uri": "spotify:track:7qH9Z4dJEN0l9bidizW7fq",
+      "name": "Anchor",
+      "artists": [
+        "Novo Amor"
+      ],
+      "duration_ms": 257533,
+      "url": "https://open.spotify.com/track/7qH9Z4dJEN0l9bidizW7fq"
+    },
+    {
+      "uri": "spotify:track:57A6HbITtifBco2NbF7Qq8",
+      "name": "Berlin",
+      "artists": [
+        "RY X"
+      ],
+      "duration_ms": 174172,
+      "url": "https://open.spotify.com/track/57A6HbITtifBco2NbF7Qq8"
+    },
+    {
+      "uri": "spotify:track:3YfS47QufnLDFA71FUsgCM",
+      "name": "The Sound of Silence",
+      "artists": [
+        "Simon & Garfunkel"
+      ],
+      "duration_ms": 184786,
+      "url": "https://open.spotify.com/track/3YfS47QufnLDFA71FUsgCM"
+    },
+    {
+      "uri": "spotify:track:6pWgRkpqVfxnj3WuIcJ7WP",
+      "name": "Cornfield Chase",
+      "artists": [
+        "Hans Zimmer"
+      ],
+      "duration_ms": 126959,
+      "url": "https://open.spotify.com/track/6pWgRkpqVfxnj3WuIcJ7WP"
+    },
+    {
+      "uri": "spotify:track:6kooDsorCpWVMGc994XjWN",
+      "name": "Black Betty",
+      "artists": [
+        "Ram Jam"
+      ],
+      "duration_ms": 240335,
+      "url": "https://open.spotify.com/track/6kooDsorCpWVMGc994XjWN"
+    },
+    {
+      "uri": "spotify:track:4Yqy0GpeDEXLibWJCZyQew",
+      "name": "Kickstart My Heart",
+      "artists": [
+        "Mötley Crüe"
+      ],
+      "duration_ms": 282653,
+      "url": "https://open.spotify.com/track/4Yqy0GpeDEXLibWJCZyQew"
+    },
+    {
+      "uri": "spotify:track:0bRNszTbTFLNlunAeh7eom",
+      "name": "Sharp Dressed Man (2008 Remaster)",
+      "artists": [
+        "ZZ Top"
+      ],
+      "duration_ms": 258026,
+      "url": "https://open.spotify.com/track/0bRNszTbTFLNlunAeh7eom"
+    },
+    {
+      "uri": "spotify:track:63IogjyJiFthyxyC0mJrwE",
+      "name": "Bad To The Bone",
+      "artists": [
+        "George Thorogood & The Destroyers"
+      ],
+      "duration_ms": 292173,
+      "url": "https://open.spotify.com/track/63IogjyJiFthyxyC0mJrwE"
+    },
+    {
+      "uri": "spotify:track:0PdM2a6oIjqepoEfcJo0RO",
+      "name": "Pour Some Sugar On Me - Remastered 2017",
+      "artists": [
+        "Def Leppard"
+      ],
+      "duration_ms": 267306,
+      "url": "https://open.spotify.com/track/0PdM2a6oIjqepoEfcJo0RO"
+    },
+    {
+      "uri": "spotify:track:1ju7EsSGvRybSNEsRvc7qY",
+      "name": "Simple Man",
+      "artists": [
+        "Lynyrd Skynyrd"
+      ],
+      "duration_ms": 356626,
+      "url": "https://open.spotify.com/track/1ju7EsSGvRybSNEsRvc7qY"
+    },
+    {
+      "uri": "spotify:track:7ACxUo21jtTHzy7ZEV56vU",
+      "name": "Crazy Train",
+      "artists": [
+        "Ozzy Osbourne"
+      ],
+      "duration_ms": 293183,
+      "url": "https://open.spotify.com/track/7ACxUo21jtTHzy7ZEV56vU"
+    },
+    {
+      "uri": "spotify:track:0u6JFVn0KHHlidZxNL9gVE",
+      "name": "La Grange (2005 Remaster)",
+      "artists": [
+        "ZZ Top"
+      ],
+      "duration_ms": 230480,
+      "url": "https://open.spotify.com/track/0u6JFVn0KHHlidZxNL9gVE"
+    },
+    {
+      "uri": "spotify:track:4jTqsgDaffdNH0BMBwhjFv",
+      "name": "I Love Rock 'N Roll",
+      "artists": [
+        "Joan Jett & the Blackhearts"
+      ],
+      "duration_ms": 175173,
+      "url": "https://open.spotify.com/track/4jTqsgDaffdNH0BMBwhjFv"
+    },
+    {
+      "uri": "spotify:track:2SiXAy7TuUkycRVbbWDEpo",
+      "name": "You Shook Me All Night Long",
+      "artists": [
+        "AC/DC"
+      ],
+      "duration_ms": 210328,
+      "url": "https://open.spotify.com/track/2SiXAy7TuUkycRVbbWDEpo"
+    },
+    {
+      "uri": "spotify:track:52m7IQitPjIy1PrULHhS9F",
+      "name": "Wanted Dead Or Alive",
+      "artists": [
+        "Bon Jovi"
+      ],
+      "duration_ms": 311004,
+      "url": "https://open.spotify.com/track/52m7IQitPjIy1PrULHhS9F"
+    },
+    {
+      "uri": "spotify:track:6eN1f9KNmiWEhpE2RhQqB5",
+      "name": "Paradise City",
+      "artists": [
+        "Guns N' Roses"
+      ],
+      "duration_ms": 405600,
+      "url": "https://open.spotify.com/track/6eN1f9KNmiWEhpE2RhQqB5"
+    },
+    {
+      "uri": "spotify:track:4TIJ7zSBNejpoIPaWpWRKc",
+      "name": "Rebel Yell",
+      "artists": [
+        "Billy Idol"
+      ],
+      "duration_ms": 288533,
+      "url": "https://open.spotify.com/track/4TIJ7zSBNejpoIPaWpWRKc"
+    },
+    {
+      "uri": "spotify:track:5XcZRgJv3zMhTqCyESjQrF",
+      "name": "Poison",
+      "artists": [
+        "Alice Cooper"
+      ],
+      "duration_ms": 269712,
+      "url": "https://open.spotify.com/track/5XcZRgJv3zMhTqCyESjQrF"
+    },
+    {
+      "uri": "spotify:track:7nemcVsXVFZF01iqpIIo2Y",
+      "name": "It's a Long Way to the Top (If You Wanna Rock 'N' Roll)",
+      "artists": [
+        "AC/DC"
+      ],
+      "duration_ms": 302430,
+      "url": "https://open.spotify.com/track/7nemcVsXVFZF01iqpIIo2Y"
+    },
+    {
+      "uri": "spotify:track:52KvuGmgcgRdrLMXOtda0E",
+      "name": "The Stroke - Remastered 2010",
+      "artists": [
+        "Billy Squier"
+      ],
+      "duration_ms": 217613,
+      "url": "https://open.spotify.com/track/52KvuGmgcgRdrLMXOtda0E"
+    },
+    {
+      "uri": "spotify:track:0G21yYKMZoHa30cYVi1iA8",
+      "name": "Welcome To The Jungle",
+      "artists": [
+        "Guns N' Roses"
+      ],
+      "duration_ms": 273480,
+      "url": "https://open.spotify.com/track/0G21yYKMZoHa30cYVi1iA8"
+    },
+    {
+      "uri": "spotify:track:4DMKwE2E2iYDKY01C335Uw",
+      "name": "Carry on Wayward Son",
+      "artists": [
+        "Kansas"
+      ],
+      "duration_ms": 323000,
+      "url": "https://open.spotify.com/track/4DMKwE2E2iYDKY01C335Uw"
+    },
+    {
+      "uri": "spotify:track:3lN8PP6R2IxbLP05QpYXng",
+      "name": "Born To Be Wild - Single Version",
+      "artists": [
+        "Steppenwolf"
+      ],
+      "duration_ms": 212893,
+      "url": "https://open.spotify.com/track/3lN8PP6R2IxbLP05QpYXng"
+    },
+    {
+      "uri": "spotify:track:2d4e45fmUnguxh6yqC7gNT",
+      "name": "Dirty Deeds Done Dirt Cheap",
+      "artists": [
+        "AC/DC"
+      ],
+      "duration_ms": 232265,
+      "url": "https://open.spotify.com/track/2d4e45fmUnguxh6yqC7gNT"
+    },
+    {
+      "uri": "spotify:track:3620P9KJS2PDebJ9ABFitc",
+      "name": "18 and Life",
+      "artists": [
+        "Skid Row"
+      ],
+      "duration_ms": 229960,
+      "url": "https://open.spotify.com/track/3620P9KJS2PDebJ9ABFitc"
+    },
+    {
+      "uri": "spotify:track:1pTw2cNrp9L3esxLAvWnN2",
+      "name": "Separate Ways (Worlds Apart) [2023 Remaster]",
+      "artists": [
+        "Journey"
+      ],
+      "duration_ms": 323453,
+      "url": "https://open.spotify.com/track/1pTw2cNrp9L3esxLAvWnN2"
+    },
+    {
+      "uri": "spotify:track:1J5XEPamp7iQaCU0aFuMnd",
+      "name": "Long Cool Woman (In a Black Dress) - 1999 Remaster",
+      "artists": [
+        "The Hollies"
+      ],
+      "duration_ms": 199200,
+      "url": "https://open.spotify.com/track/1J5XEPamp7iQaCU0aFuMnd"
+    },
+    {
+      "uri": "spotify:track:58z9sfHe9s9zTvYGKehCWM",
+      "name": "Here I Go Again - 1987 Version / 2018 Remaster",
+      "artists": [
+        "Whitesnake"
+      ],
+      "duration_ms": 275395,
+      "url": "https://open.spotify.com/track/58z9sfHe9s9zTvYGKehCWM"
+    },
+    {
+      "uri": "spotify:track:2zYzyRzz6pRmhPzyfMEC8s",
+      "name": "Highway to Hell",
+      "artists": [
+        "AC/DC"
+      ],
+      "duration_ms": 208110,
+      "url": "https://open.spotify.com/track/2zYzyRzz6pRmhPzyfMEC8s"
+    },
+    {
+      "uri": "spotify:track:1grvqYbhgqJxwdzeY1vgSb",
+      "name": "No One Like You - 2015 - Remaster",
+      "artists": [
+        "Scorpions"
+      ],
+      "duration_ms": 238866,
+      "url": "https://open.spotify.com/track/1grvqYbhgqJxwdzeY1vgSb"
+    },
+    {
+      "uri": "spotify:track:3Jnxngdff0lVu2rza1GVx6",
+      "name": "Paranoid - 2009 Remaster",
+      "artists": [
+        "Black Sabbath"
+      ],
+      "duration_ms": 167720,
+      "url": "https://open.spotify.com/track/3Jnxngdff0lVu2rza1GVx6"
+    },
+    {
+      "uri": "spotify:track:5Ih9gbqyxCzTJ43nuSuKnC",
+      "name": "Dream On",
+      "artists": [
+        "Aerosmith"
+      ],
+      "duration_ms": 267600,
+      "url": "https://open.spotify.com/track/5Ih9gbqyxCzTJ43nuSuKnC"
+    },
+    {
+      "uri": "spotify:track:00qOE7OjRl0BpYiCiweZB2",
+      "name": "Juke Box Hero",
+      "artists": [
+        "Foreigner"
+      ],
+      "duration_ms": 259799,
+      "url": "https://open.spotify.com/track/00qOE7OjRl0BpYiCiweZB2"
+    },
+    {
+      "uri": "spotify:track:3OccwXSaM4pZ4CiRkaqKX7",
+      "name": "Slow Ride - 2016 Remaster",
+      "artists": [
+        "Foghat"
+      ],
+      "duration_ms": 494626,
+      "url": "https://open.spotify.com/track/3OccwXSaM4pZ4CiRkaqKX7"
+    },
+    {
+      "uri": "spotify:track:2udGjDmpK1dH9VGyw7nrei",
+      "name": "Cocaine",
+      "artists": [
+        "Eric Clapton"
+      ],
+      "duration_ms": 221640,
+      "url": "https://open.spotify.com/track/2udGjDmpK1dH9VGyw7nrei"
+    },
+    {
+      "uri": "spotify:track:5fZJQrFKWQLb7FpJXZ1g7K",
+      "name": "A Bar Song (Tipsy)",
+      "artists": [
+        "Shaboozey"
+      ],
+      "duration_ms": 171291,
+      "url": "https://open.spotify.com/track/5fZJQrFKWQLb7FpJXZ1g7K"
+    },
+    {
+      "uri": "spotify:track:2uqYupMHANxnwgeiXTZXzd",
+      "name": "Austin (Boots Stop Workin')",
+      "artists": [
+        "Dasha"
+      ],
+      "duration_ms": 171782,
+      "url": "https://open.spotify.com/track/2uqYupMHANxnwgeiXTZXzd"
+    },
+    {
+      "uri": "spotify:track:17phhZDn6oGtzMe56NuWvj",
+      "name": "Lose Control",
+      "artists": [
+        "Teddy Swims"
+      ],
+      "duration_ms": 210688,
+      "url": "https://open.spotify.com/track/17phhZDn6oGtzMe56NuWvj"
+    },
+    {
+      "uri": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
+      "name": "Too Sweet",
+      "artists": [
+        "Hozier"
+      ],
+      "duration_ms": 251424,
+      "url": "https://open.spotify.com/track/3HMY0r2BAdpasXMY8rseR0"
+    },
+    {
+      "uri": "spotify:track:5IZXB5IKAD2qlvTPJYDCFB",
+      "name": "I Had Some Help (Feat. Morgan Wallen)",
+      "artists": [
+        "Post Malone",
+        "Morgan Wallen"
+      ],
+      "duration_ms": 178205,
+      "url": "https://open.spotify.com/track/5IZXB5IKAD2qlvTPJYDCFB"
+    },
+    {
+      "uri": "spotify:track:1CDQzbCz4KSQxHe7LMEgRM",
+      "name": "Houdini",
+      "artists": [
+        "Eminem"
+      ],
+      "duration_ms": 227032,
+      "url": "https://open.spotify.com/track/1CDQzbCz4KSQxHe7LMEgRM"
+    },
+    {
+      "uri": "spotify:track:3Vr3zh0r7ALn8VLqCiRR10",
+      "name": "Stargazing",
+      "artists": [
+        "Myles Smith"
+      ],
+      "duration_ms": 172533,
+      "url": "https://open.spotify.com/track/3Vr3zh0r7ALn8VLqCiRR10"
+    },
+    {
+      "uri": "spotify:track:7hR22TOX3RorxJPcsz5Wbo",
+      "name": "Love Somebody",
+      "artists": [
+        "Morgan Wallen"
+      ],
+      "duration_ms": 204828,
+      "url": "https://open.spotify.com/track/7hR22TOX3RorxJPcsz5Wbo"
+    },
+    {
+      "uri": "spotify:track:6qqrTXSdwiJaq8SO0X2lSe",
+      "name": "Ordinary",
+      "artists": [
+        "Alex Warren"
+      ],
+      "duration_ms": 186964,
+      "url": "https://open.spotify.com/track/6qqrTXSdwiJaq8SO0X2lSe"
+    },
+    {
+      "uri": "spotify:track:0eJmsdfbAOM1KD0w50EhlD",
+      "name": "SUPERMODEL",
+      "artists": [
+        "Måneskin"
+      ],
+      "duration_ms": 148064,
+      "url": "https://open.spotify.com/track/0eJmsdfbAOM1KD0w50EhlD"
+    },
+    {
+      "uri": "spotify:track:3JG1uFc40wfyrqaWC7iv0e",
+      "name": "i like the way you kiss me",
+      "artists": [
+        "Artemas"
+      ],
+      "duration_ms": 142514,
+      "url": "https://open.spotify.com/track/3JG1uFc40wfyrqaWC7iv0e"
+    },
+    {
+      "uri": "spotify:track:6393yGahSJ9slVdOwSxOVR",
+      "name": "Pink Pony Club",
+      "artists": [
+        "Chappell Roan"
+      ],
+      "duration_ms": 258034,
+      "url": "https://open.spotify.com/track/6393yGahSJ9slVdOwSxOVR"
+    },
+    {
+      "uri": "spotify:track:0rtDE9zfXbamTlRUSwY7zy",
+      "name": "Belong Together",
+      "artists": [
+        "Mark Ambor"
+      ],
+      "duration_ms": 148317,
+      "url": "https://open.spotify.com/track/0rtDE9zfXbamTlRUSwY7zy"
+    },
+    {
+      "uri": "spotify:track:6lKSOnC9iLGDonypMgvGrm",
+      "name": "Too Much",
+      "artists": [
+        "Dove Cameron"
+      ],
+      "duration_ms": 171335,
+      "url": "https://open.spotify.com/track/6lKSOnC9iLGDonypMgvGrm"
+    },
+    {
+      "uri": "spotify:track:6Qb7YsAqH4wWFUMbGsCpap",
+      "name": "Training Season",
+      "artists": [
+        "Dua Lipa"
+      ],
+      "duration_ms": 209487,
+      "url": "https://open.spotify.com/track/6Qb7YsAqH4wWFUMbGsCpap"
+    },
+    {
+      "uri": "spotify:track:3x3K1RP3Zfi2qeMR8kyrNO",
+      "name": "Sorry I'm Here For Someone Else",
+      "artists": [
+        "Benson Boone"
+      ],
+      "duration_ms": 156582,
+      "url": "https://open.spotify.com/track/3x3K1RP3Zfi2qeMR8kyrNO"
+    },
+    {
+      "uri": "spotify:track:4TwEdnSiTPDR1vg1QZ5K8W",
+      "name": "Beautiful People",
+      "artists": [
+        "David Guetta",
+        "Sia"
+      ],
+      "duration_ms": 187086,
+      "url": "https://open.spotify.com/track/4TwEdnSiTPDR1vg1QZ5K8W"
+    },
+    {
+      "uri": "spotify:track:4il87YHqSV9UqbBkXM7z7m",
+      "name": "Sports car",
+      "artists": [
+        "Tate McRae"
+      ],
+      "duration_ms": 165045,
+      "url": "https://open.spotify.com/track/4il87YHqSV9UqbBkXM7z7m"
+    },
+    {
+      "uri": "spotify:track:0LMwmV37RCmBO2so0szAFs",
+      "name": "Whatever",
+      "artists": [
+        "Kygo",
+        "Ava Max"
+      ],
+      "duration_ms": 178273,
+      "url": "https://open.spotify.com/track/0LMwmV37RCmBO2so0szAFs"
+    },
+    {
+      "uri": "spotify:track:1musbempyJAw5gfSKZHXP9",
+      "name": "Anxiety",
+      "artists": [
+        "Doechii"
+      ],
+      "duration_ms": 249302,
+      "url": "https://open.spotify.com/track/1musbempyJAw5gfSKZHXP9"
+    },
+    {
+      "uri": "spotify:track:2LHNTC9QZxsL3nWpt8iaSR",
+      "name": "Abracadabra",
+      "artists": [
+        "Lady Gaga"
+      ],
+      "duration_ms": 223398,
+      "url": "https://open.spotify.com/track/2LHNTC9QZxsL3nWpt8iaSR"
+    },
+    {
+      "uri": "spotify:track:7bn5nXdatftk0CHSrd7NHQ",
+      "name": "how could u love somebody like me?",
+      "artists": [
+        "Artemas"
+      ],
+      "duration_ms": 126447,
+      "url": "https://open.spotify.com/track/7bn5nXdatftk0CHSrd7NHQ"
+    },
+    {
+      "uri": "spotify:track:5AJ9hqTS2wcFQCELCFRO7A",
+      "name": "MILLION DOLLAR BABY",
+      "artists": [
+        "Tommy Richman"
+      ],
+      "duration_ms": 155151,
+      "url": "https://open.spotify.com/track/5AJ9hqTS2wcFQCELCFRO7A"
+    },
+    {
+      "uri": "spotify:track:3wPPWcVuinAU7dXcJXtCID",
+      "name": "La La La",
+      "artists": [
+        "Naughty Boy",
+        "Sam Smith"
+      ],
+      "duration_ms": 222200,
+      "url": "https://open.spotify.com/track/3wPPWcVuinAU7dXcJXtCID"
+    }
+  ]
+}

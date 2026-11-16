@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-16",
+  "mode": "apply",
+  "recent_events_observed": 50,
+  "seven_day_coverage_verified": false,
+  "playlists": {
+    "daily-shit": {
+      "name": "00 | 01 Daily Shit — No Skips",
+      "playlist_url": "https://open.spotify.com/playlist/4DSzqggyHo0y64TInU1TA8",
+      "before_count": 65,
+      "after_count": 66,
+      "duration_minutes": 260.9,
+      "added": [
+        {
+          "uri": "spotify:track:1pTw2cNrp9L3esxLAvWnN2",
+          "name": "Separate Ways (Worlds Apart) [2023 Remaster]",
+          "artists": [
+            "Journey"
+          ],
+          "url": "https://open.spotify.com/track/1pTw2cNrp9L3esxLAvWnN2"
+        }
+      ],
+      "suggested": [],
+      "removed": [],
+      "note": ""
+    },
+    "cardio": {
+      "name": "00 | 02 Cardio — Never Slow Down",
+      "playlist_url": "https://open.spotify.com/playlist/3K2hmDsk0PvjICmHOGg1Cy",
+      "before_count": 61,
+      "after_count": 61,
+      "duration_minutes": 216.6,
+      "added": [],
+      "suggested": [],
+      "removed": [],
+      "note": ""
+    },
+    "lifting": {
+      "name": "00 | 03 Lifting — Heavy Is the Mood",
+      "playlist_url": "https://open.spotify.com/playlist/7orUFSZcYEAN02usgW9Fz3",
+      "before_count": 47,
+      "after_count": 47,
+      "duration_minutes": 180.9,
+      "added": [],
+      "suggested": [],
+      "removed": [],
+      "note": ""
+    },
+    "focus": {
+      "name": "00 | 04 Focus — Deep Space",
+      "playlist_url": "https://open.spotify.com/playlist/2aEYq47gLLHXf8nvycjaco",
+      "before_count": 71,
+      "after_count": 71,
+      "duration_minutes": 273.5,
+      "added": [],
+      "suggested": [],
+      "removed": [],
+      "note": ""
+    },
+    "driving": {
+      "name": "00 | 05 Driving — The Long Way Home",
+      "playlist_url": "https://open.spotify.com/playlist/42XFduXA9oYtRvG8QsrGBZ",
+      "before_count": 65,
+      "after_count": 65,
+      "duration_minutes": 258.0,
+      "added": [],
+      "suggested": [],
+      "removed": [],
+      "note": ""
+    }
+  }
+}

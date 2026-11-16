@@ -1,0 +1,437 @@
+{
+  "snapshot_date": "2026-11-16",
+  "playlist_id": "7orUFSZcYEAN02usgW9Fz3",
+  "playlist_uri": "spotify:playlist:7orUFSZcYEAN02usgW9Fz3",
+  "name": "00 | 03 Lifting — Heavy Is the Mood",
+  "track_count": 47,
+  "duration_ms": 10854249,
+  "tracks": [
+    {
+      "uri": "spotify:track:69QHm3pustz01CJRwdo20z",
+      "name": "Hells Bells",
+      "artists": [
+        "AC/DC"
+      ],
+      "duration_ms": 312815,
+      "url": "https://open.spotify.com/track/69QHm3pustz01CJRwdo20z"
+    },
+    {
+      "uri": "spotify:track:6ljbkNIzfmFrGyYUTUAleN",
+      "name": "Remember the Name (feat. Styles of Beyond)",
+      "artists": [
+        "Fort Minor",
+        "Styles Of Beyond"
+      ],
+      "duration_ms": 230493,
+      "url": "https://open.spotify.com/track/6ljbkNIzfmFrGyYUTUAleN"
+    },
+    {
+      "uri": "spotify:track:5anCkDvJ17aznvK5TED5uo",
+      "name": "Hail to the King",
+      "artists": [
+        "Avenged Sevenfold"
+      ],
+      "duration_ms": 305906,
+      "url": "https://open.spotify.com/track/5anCkDvJ17aznvK5TED5uo"
+    },
+    {
+      "uri": "spotify:track:4Yf5bqU3NK4kNOypcrLYwU",
+      "name": "Faint",
+      "artists": [
+        "Linkin Park"
+      ],
+      "duration_ms": 162106,
+      "url": "https://open.spotify.com/track/4Yf5bqU3NK4kNOypcrLYwU"
+    },
+    {
+      "uri": "spotify:track:4ImIJRZNJhNQLLdUFSYJoS",
+      "name": "Down with the Sickness",
+      "artists": [
+        "Disturbed"
+      ],
+      "duration_ms": 278706,
+      "url": "https://open.spotify.com/track/4ImIJRZNJhNQLLdUFSYJoS"
+    },
+    {
+      "uri": "spotify:track:61mWefnWQOLf90gepjOCb3",
+      "name": "Duality",
+      "artists": [
+        "Slipknot"
+      ],
+      "duration_ms": 252613,
+      "url": "https://open.spotify.com/track/61mWefnWQOLf90gepjOCb3"
+    },
+    {
+      "uri": "spotify:track:7fcfNW0XxTWlwVlftzfDOR",
+      "name": "Walk",
+      "artists": [
+        "Pantera"
+      ],
+      "duration_ms": 315120,
+      "url": "https://open.spotify.com/track/7fcfNW0XxTWlwVlftzfDOR"
+    },
+    {
+      "uri": "spotify:track:2MuWTIM3b0YEAskbeeFE1i",
+      "name": "Master Of Puppets",
+      "artists": [
+        "Metallica"
+      ],
+      "duration_ms": 515386,
+      "url": "https://open.spotify.com/track/2MuWTIM3b0YEAskbeeFE1i"
+    },
+    {
+      "uri": "spotify:track:4UEo1b0wWrtHMC8bVqPiH8",
+      "name": "Nightmare",
+      "artists": [
+        "Avenged Sevenfold"
+      ],
+      "duration_ms": 374453,
+      "url": "https://open.spotify.com/track/4UEo1b0wWrtHMC8bVqPiH8"
+    },
+    {
+      "uri": "spotify:track:4Yqy0GpeDEXLibWJCZyQew",
+      "name": "Kickstart My Heart",
+      "artists": [
+        "Mötley Crüe"
+      ],
+      "duration_ms": 282653,
+      "url": "https://open.spotify.com/track/4Yqy0GpeDEXLibWJCZyQew"
+    },
+    {
+      "uri": "spotify:track:78mjaBatbfvwx5KJwI036H",
+      "name": "Mz. Hyde",
+      "artists": [
+        "Halestorm"
+      ],
+      "duration_ms": 202306,
+      "url": "https://open.spotify.com/track/78mjaBatbfvwx5KJwI036H"
+    },
+    {
+      "uri": "spotify:track:3gmEzilP9BzF45wIMvA16l",
+      "name": "I Miss the Misery",
+      "artists": [
+        "Halestorm"
+      ],
+      "duration_ms": 183506,
+      "url": "https://open.spotify.com/track/3gmEzilP9BzF45wIMvA16l"
+    },
+    {
+      "uri": "spotify:track:1cxCqerH9jNz1B6xnlT02y",
+      "name": "Good Day To Die",
+      "artists": [
+        "Godsmack"
+      ],
+      "duration_ms": 235666,
+      "url": "https://open.spotify.com/track/1cxCqerH9jNz1B6xnlT02y"
+    },
+    {
+      "uri": "spotify:track:51HpNM8RKewP5PAuBLqXwy",
+      "name": "All American Nightmare",
+      "artists": [
+        "Hinder"
+      ],
+      "duration_ms": 197453,
+      "url": "https://open.spotify.com/track/51HpNM8RKewP5PAuBLqXwy"
+    },
+    {
+      "uri": "spotify:track:60a0Rd6pjrkxjPbaKzXjfq",
+      "name": "In the End",
+      "artists": [
+        "Linkin Park"
+      ],
+      "duration_ms": 216880,
+      "url": "https://open.spotify.com/track/60a0Rd6pjrkxjPbaKzXjfq"
+    },
+    {
+      "uri": "spotify:track:2nLtzopw4rPReszdYBJU6h",
+      "name": "Numb",
+      "artists": [
+        "Linkin Park"
+      ],
+      "duration_ms": 187520,
+      "url": "https://open.spotify.com/track/2nLtzopw4rPReszdYBJU6h"
+    },
+    {
+      "uri": "spotify:track:0eKCfj7xCuJNoYrLlSJe59",
+      "name": "Touch, Peel And Stand",
+      "artists": [
+        "Days Of The New"
+      ],
+      "duration_ms": 297146,
+      "url": "https://open.spotify.com/track/0eKCfj7xCuJNoYrLlSJe59"
+    },
+    {
+      "uri": "spotify:track:6ZxrUCaynLgKSUudACOTwj",
+      "name": "Cold",
+      "artists": [
+        "Crossfade"
+      ],
+      "duration_ms": 194226,
+      "url": "https://open.spotify.com/track/6ZxrUCaynLgKSUudACOTwj"
+    },
+    {
+      "uri": "spotify:track:1hntQPOGfiSztG0cASWRoX",
+      "name": "I Apologize",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 242956,
+      "url": "https://open.spotify.com/track/1hntQPOGfiSztG0cASWRoX"
+    },
+    {
+      "uri": "spotify:track:4QksBPOns9inxD6gaAo4Zc",
+      "name": "Under and Over It",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 218133,
+      "url": "https://open.spotify.com/track/4QksBPOns9inxD6gaAo4Zc"
+    },
+    {
+      "uri": "spotify:track:1L82mjibDdF0YAv9FWp00s",
+      "name": "Lift Me Up",
+      "artists": [
+        "Five Finger Death Punch",
+        "Rob Halford"
+      ],
+      "duration_ms": 246209,
+      "url": "https://open.spotify.com/track/1L82mjibDdF0YAv9FWp00s"
+    },
+    {
+      "uri": "spotify:track:1rHFwfQ82fF8naz997QF6h",
+      "name": "Fake",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 210900,
+      "url": "https://open.spotify.com/track/1rHFwfQ82fF8naz997QF6h"
+    },
+    {
+      "uri": "spotify:track:36HzhD2hKH5bLYCFUiriO0",
+      "name": "My Nemesis",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 215871,
+      "url": "https://open.spotify.com/track/36HzhD2hKH5bLYCFUiriO0"
+    },
+    {
+      "uri": "spotify:track:10PWT0dsYrbAHvMZGBHLXy",
+      "name": "Trouble",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 192188,
+      "url": "https://open.spotify.com/track/10PWT0dsYrbAHvMZGBHLXy"
+    },
+    {
+      "uri": "spotify:track:72bwwzxhRQN8u6I6R6hwtO",
+      "name": "Meet My Maker",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 180000,
+      "url": "https://open.spotify.com/track/72bwwzxhRQN8u6I6R6hwtO"
+    },
+    {
+      "uri": "spotify:track:3iBiETSIaFAy0h3asZMzrT",
+      "name": "Hell to Pay",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 187670,
+      "url": "https://open.spotify.com/track/3iBiETSIaFAy0h3asZMzrT"
+    },
+    {
+      "uri": "spotify:track:3ZcoXVmncagpSSmEFBncTS",
+      "name": "You're Not My Kind",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 201299,
+      "url": "https://open.spotify.com/track/3ZcoXVmncagpSSmEFBncTS"
+    },
+    {
+      "uri": "spotify:track:4jgA5jY7F5KdpZBIi4W1CZ",
+      "name": "Save Your Breath",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 207422,
+      "url": "https://open.spotify.com/track/4jgA5jY7F5KdpZBIi4W1CZ"
+    },
+    {
+      "uri": "spotify:track:43t5hN2oFvyPCqgXnhwv4Y",
+      "name": "Fire In The Hole",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 176544,
+      "url": "https://open.spotify.com/track/43t5hN2oFvyPCqgXnhwv4Y"
+    },
+    {
+      "uri": "spotify:track:0Y4vrkqydY3Ziiff8hvN6C",
+      "name": "Bad Seed",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 239119,
+      "url": "https://open.spotify.com/track/0Y4vrkqydY3Ziiff8hvN6C"
+    },
+    {
+      "uri": "spotify:track:2O2asfk0T9DyZurX7zKWp7",
+      "name": "Hard To See",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 210080,
+      "url": "https://open.spotify.com/track/2O2asfk0T9DyZurX7zKWp7"
+    },
+    {
+      "uri": "spotify:track:2ioTQEEJcTMdiFE6PCwj9q",
+      "name": "When The Seasons Change",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 227309,
+      "url": "https://open.spotify.com/track/2ioTQEEJcTMdiFE6PCwj9q"
+    },
+    {
+      "uri": "spotify:track:4WqYATWt5rX8ukTGDTqAjQ",
+      "name": "This Is My War",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 175403,
+      "url": "https://open.spotify.com/track/4WqYATWt5rX8ukTGDTqAjQ"
+    },
+    {
+      "uri": "spotify:track:2MK3BzOMXZWve2v2oteAVl",
+      "name": "100 Ways to Hate",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 200973,
+      "url": "https://open.spotify.com/track/2MK3BzOMXZWve2v2oteAVl"
+    },
+    {
+      "uri": "spotify:track:648fQrTDPYRbRUe5l6UM9x",
+      "name": "Death Before Dishonor",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 234400,
+      "url": "https://open.spotify.com/track/648fQrTDPYRbRUe5l6UM9x"
+    },
+    {
+      "uri": "spotify:track:6AKWOVOJ81OQfsgxZbJ6QN",
+      "name": "Wash It All Away",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 224906,
+      "url": "https://open.spotify.com/track/6AKWOVOJ81OQfsgxZbJ6QN"
+    },
+    {
+      "uri": "spotify:track:4EJZgvebpQvxvoPTRUvWrK",
+      "name": "Burn MF",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 217847,
+      "url": "https://open.spotify.com/track/4EJZgvebpQvxvoPTRUvWrK"
+    },
+    {
+      "uri": "spotify:track:4BSjvDSi3ZtrSavQqgu6jO",
+      "name": "Got Your Six",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 178100,
+      "url": "https://open.spotify.com/track/4BSjvDSi3ZtrSavQqgu6jO"
+    },
+    {
+      "uri": "spotify:track:6eujR20chVKpttKxzf0vEP",
+      "name": "No One Gets Left Behind",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 203786,
+      "url": "https://open.spotify.com/track/6eujR20chVKpttKxzf0vEP"
+    },
+    {
+      "uri": "spotify:track:0fDyPYLp5aveCQsTe6dKEr",
+      "name": "American Capitalist",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 208440,
+      "url": "https://open.spotify.com/track/0fDyPYLp5aveCQsTe6dKEr"
+    },
+    {
+      "uri": "spotify:track:3F2LSbo3ZIewZq9NjzNIss",
+      "name": "Boots and Blood",
+      "artists": [
+        "Five Finger Death Punch"
+      ],
+      "duration_ms": 165862,
+      "url": "https://open.spotify.com/track/3F2LSbo3ZIewZq9NjzNIss"
+    },
+    {
+      "uri": "spotify:track:3ASqLQWbgejOEJzxP4mrfY",
+      "name": "Anywhere But Here (feat. Maria Brink)",
+      "artists": [
+        "Five Finger Death Punch",
+        "Maria Brink"
+      ],
+      "duration_ms": 225691,
+      "url": "https://open.spotify.com/track/3ASqLQWbgejOEJzxP4mrfY"
+    },
+    {
+      "uri": "spotify:track:6ndmKwWqMozN2tcZqzCX4K",
+      "name": "Remember the Name (feat. Styles of Beyond)",
+      "artists": [
+        "Fort Minor",
+        "Styles Of Beyond"
+      ],
+      "duration_ms": 230493,
+      "url": "https://open.spotify.com/track/6ndmKwWqMozN2tcZqzCX4K"
+    },
+    {
+      "uri": "spotify:track:3xktQXIr1OD3ENc19viwDP",
+      "name": "Bodies",
+      "artists": [
+        "Drowning Pool"
+      ],
+      "duration_ms": 201960,
+      "url": "https://open.spotify.com/track/3xktQXIr1OD3ENc19viwDP"
+    },
+    {
+      "uri": "spotify:track:5W8YXBz9MTIDyrpYaCg2Ky",
+      "name": "Last Resort",
+      "artists": [
+        "Papa Roach"
+      ],
+      "duration_ms": 199906,
+      "url": "https://open.spotify.com/track/5W8YXBz9MTIDyrpYaCg2Ky"
+    },
+    {
+      "uri": "spotify:track:3jjU4Pky1ja5J1onU6ei4T",
+      "name": "The Vengeful One",
+      "artists": [
+        "Disturbed"
+      ],
+      "duration_ms": 252002,
+      "url": "https://open.spotify.com/track/3jjU4Pky1ja5J1onU6ei4T"
+    },
+    {
+      "uri": "spotify:track:5ZPp1V3PufN6qhAe3rLNmb",
+      "name": "Kryptonite",
+      "artists": [
+        "3 Doors Down"
+      ],
+      "duration_ms": 233826,
+      "url": "https://open.spotify.com/track/5ZPp1V3PufN6qhAe3rLNmb"
+    }
+  ]
+}
