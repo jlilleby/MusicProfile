@@ -1,10 +1,10 @@
 {
-  "snapshot_date": "2026-11-16",
+  "snapshot_date": "2026-11-19",
   "playlist_id": "42XFduXA9oYtRvG8QsrGBZ",
   "playlist_uri": "spotify:playlist:42XFduXA9oYtRvG8QsrGBZ",
   "name": "00 | 05 Driving — The Long Way Home",
-  "track_count": 65,
-  "duration_ms": 15479359,
+  "track_count": 66,
+  "duration_ms": 15984692,
   "tracks": [
     {
       "uri": "spotify:track:4rlWtsOCfxD8u1aCbbaHHp",
@@ -594,6 +594,15 @@
       ],
       "duration_ms": 222200,
       "url": "https://open.spotify.com/track/3wPPWcVuinAU7dXcJXtCID"
+    },
+    {
+      "uri": "spotify:track:4nFNJmjfgBF7jwv2oBC45b",
+      "name": "Money For Nothing - Remastered 1996",
+      "artists": [
+        "Dire Straits"
+      ],
+      "duration_ms": 505333,
+      "url": "https://open.spotify.com/track/4nFNJmjfgBF7jwv2oBC45b"
     }
   ]
 }

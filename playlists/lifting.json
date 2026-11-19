@@ -1,10 +1,10 @@
 {
-  "snapshot_date": "2026-11-16",
+  "snapshot_date": "2026-11-19",
   "playlist_id": "7orUFSZcYEAN02usgW9Fz3",
   "playlist_uri": "spotify:playlist:7orUFSZcYEAN02usgW9Fz3",
   "name": "00 | 03 Lifting — Heavy Is the Mood",
-  "track_count": 47,
-  "duration_ms": 10854249,
+  "track_count": 48,
+  "duration_ms": 11086514,
   "tracks": [
     {
       "uri": "spotify:track:69QHm3pustz01CJRwdo20z",
@@ -432,6 +432,15 @@
       ],
       "duration_ms": 233826,
       "url": "https://open.spotify.com/track/5ZPp1V3PufN6qhAe3rLNmb"
+    },
+    {
+      "uri": "spotify:track:2d4e45fmUnguxh6yqC7gNT",
+      "name": "Dirty Deeds Done Dirt Cheap",
+      "artists": [
+        "AC/DC"
+      ],
+      "duration_ms": 232265,
+      "url": "https://open.spotify.com/track/2d4e45fmUnguxh6yqC7gNT"
     }
   ]
 }

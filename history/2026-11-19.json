@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-19",
+  "mode": "apply",
+  "listening_source": {
+    "source": "last.fm",
+    "lastfm_user": "littletown92",
+    "scrobbles_observed": 190,
+    "unique_tracks_observed": 140,
+    "pages_fetched": 1,
+    "seven_day_window_queried": true,
+    "seven_day_coverage_verified": false,
+    "repeated_titles_matched": 7,
+    "repeated_titles_ambiguous": 31,
+    "repeated_titles_unmatched": 0,
+    "repeated_titles_skipped_cap": 0
+  },
+  "recent_events_observed": 190,
+  "seven_day_coverage_verified": false,
+  "playlists": {
+    "daily-shit": {
+      "name": "00 | 01 Daily Shit — No Skips",
+      "playlist_url": "https://open.spotify.com/playlist/4DSzqggyHo0y64TInU1TA8",
+      "before_count": 66,
+      "after_count": 66,
+      "duration_minutes": 260.9,
+      "added": [],
+      "suggested": [],
+      "removed": [],
+      "note": ""
+    },
+    "cardio": {
+      "name": "00 | 02 Cardio — Never Slow Down",
+      "playlist_url": "https://open.spotify.com/playlist/3K2hmDsk0PvjICmHOGg1Cy",
+      "before_count": 61,
+      "after_count": 61,
+      "duration_minutes": 216.6,
+      "added": [],
+      "suggested": [],
+      "removed": [],
+      "note": ""
+    },
+    "lifting": {
+      "name": "00 | 03 Lifting — Heavy Is the Mood",
+      "playlist_url": "https://open.spotify.com/playlist/7orUFSZcYEAN02usgW9Fz3",
+      "before_count": 47,
+      "after_count": 48,
+      "duration_minutes": 184.8,
+      "added": [
+        {
+          "uri": "spotify:track:2d4e45fmUnguxh6yqC7gNT",
+          "name": "Dirty Deeds Done Dirt Cheap",
+          "artists": [
+            "AC/DC"
+          ],
+          "url": "https://open.spotify.com/track/2d4e45fmUnguxh6yqC7gNT"
+        }
+      ],
+      "suggested": [],
+      "removed": [],
+      "note": ""
+    },
+    "focus": {
+      "name": "00 | 04 Focus — Deep Space",
+      "playlist_url": "https://open.spotify.com/playlist/2aEYq47gLLHXf8nvycjaco",
+      "before_count": 71,
+      "after_count": 71,
+      "duration_minutes": 273.5,
+      "added": [],
+      "suggested": [],
+      "removed": [],
+      "note": ""
+    },
+    "driving": {
+      "name": "00 | 05 Driving — The Long Way Home",
+      "playlist_url": "https://open.spotify.com/playlist/42XFduXA9oYtRvG8QsrGBZ",
+      "before_count": 65,
+      "after_count": 66,
+      "duration_minutes": 266.4,
+      "added": [
+        {
+          "uri": "spotify:track:4nFNJmjfgBF7jwv2oBC45b",
+          "name": "Money For Nothing - Remastered 1996",
+          "artists": [
+            "Dire Straits"
+          ],
+          "url": "https://open.spotify.com/track/4nFNJmjfgBF7jwv2oBC45b"
+        }
+      ],
+      "suggested": [],
+      "removed": [],
+      "note": ""
+    }
+  }
+}
