@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""Conservative Spotify playlist refresher. Python stdlib only.
-
-Observations: Spotify's recently-played feed has its own history limit;
-this script never asserts a complete seven-day history unless it can reach the cutoff.
-"""
+"""Conservative weekly Last.fm-based Spotify playlist refresher. Python stdlib only."""
 import argparse
 import base64
 import collections
@@ -196,7 +192,6 @@ def main():
     mode.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
     today = dt.datetime.now(OSLO).date().isoformat()
-    cutoff = dt.datetime.now(UTC) - dt.timedelta(days=7)
     token = access_token()
     me = get(token, "/me")
     my_id = me["id"]
@@ -204,9 +199,11 @@ def main():
     available = []
     for page in pages(token, "/me/playlists", limit=50):
         available += page.get("items", [])
-    from spotify_history import collect
-    listens, reached_cutoff = collect(token, get, track_data, persist=args.apply, days=7)
-    print(f"Spotify authenticated. {len(listens)} rolling observed play events; collection continuity verified: {reached_cutoff}")
+    from lastfm_history import fetch_scrobbles, resolve_spotify
+    scrobble_counts, scrobble_names, source_stats = fetch_scrobbles(days=7)
+    listens, mapping_stats = resolve_spotify(token, get, track_data, scrobble_counts, scrobble_names)
+    source_stats.update(mapping_stats)
+    print(f"Spotify authenticated. {len(listens)} resolved scrobble observations from Last.fm; no Spotify listening-history polling.")
     results = {}
     snapshots_changed = False
     for label, conf in configs.items():
@@ -252,17 +249,20 @@ def main():
             print(f"ERROR {label}: {ex}", file=sys.stderr)
     report = {
         "date": today, "mode": "apply" if args.apply else "dry-run",
-        "recent_events_observed": len(listens),
-        "seven_day_coverage_verified": reached_cutoff,
+        "listening_source": source_stats,
+        "recent_events_observed": source_stats["scrobbles_observed"],
+        "seven_day_coverage_verified": False,
         "playlists": results,
     }
-    # Dry-run never creates artifacts or commits. Encrypted aggregates are persisted by collect only in apply mode.
+    # Dry-run never creates artifacts or commits. No individual scrobble timestamps are persisted.
     if args.apply and snapshots_changed:
         # Only persist evidence of actual state changes (or a first baseline).
         save_json(ROOT / "history" / f"{today}.json", report)
-        lines = [f"# Spotify playlist update — {today}", "", "Data source: Spotify Web API."
-                 " Recently played may cover less than seven days due to provider limits.",
-                 f"Observed play events: {len(listens)} (reached 7-day cutoff: {reached_cutoff}).", ""]
+        lines = [f"# Spotify playlist update — {today}", "",
+                 "Listening source: Last.fm user littletown92, seven-day paginated scrobble window.",
+                 "Spotify API: playlist inspection, catalogue resolution and verified edits.",
+                 "Last.fm scrobbling completeness cannot be independently guaranteed.",
+                 f"Observed Last.fm scrobbles: {source_stats['scrobbles_observed']}; Spotify catalogue mappings: {source_stats['repeated_titles_matched']}.", ""]
         for key, info in results.items():
             lines += [f"## {key}"]
             if "error" in info:
@@ -282,7 +282,7 @@ def main():
         if not report_path.exists() or report_path.read_text() != content:
             report_path.write_text(content)
     if args.apply and not snapshots_changed:
-        print("No playlist snapshot changes; listening aggregates may still have advanced")
+        print("No playlist snapshot changes; no history files or commit needed")
     print(json.dumps(report, indent=2, ensure_ascii=False))
     if all("error" in r for r in results.values()):
         raise RuntimeError("No target playlists were readable; refusing to publish results")
