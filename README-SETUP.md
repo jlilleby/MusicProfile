@@ -1,98 +1,49 @@
-# MusicProfile — weekly Spotify automation
+# MusicProfile — Weekly Last.fm → Spotify playlist refresh
 
-This package runs in `jlilleby/MusicProfile`, branch `main`.
+This project runs in the public GitHub repository `jlilleby/MusicProfile` on `main`.
 
-## Install
+## Current setup
 
-The workflow files are already committed to this repository. The original installation instructions below are retained for reference.
+- **History:** Last.fm user [littletown92](https://www.last.fm/user/littletown92), using the GitHub Actions secret `LASTFM_API_KEY`.
+- **Playlist edits:** Spotify Web API, using the existing `SPOTIFY_CLIENT_ID`, `SPOTIFY_CLIENT_SECRET`, and `SPOTIFY_REFRESH_TOKEN` secrets.
+- **Schedule:** Every Monday at 04:00 Europe/Oslo. GitHub Actions uses UTC cron entries and an Oslo daylight-saving-time guard. The exact start time can be delayed by GitHub.
+- **Manual test:** Actions → Weekly Spotify Playlist Refresh → Run workflow; leave `apply_changes=false` for dry-run. Use `true` only when you want to write verified Spotify updates.
+- **Collection:** No 30-minute polling workflow is scheduled anymore. Last.fm is queried once per weekly refresh.
 
-Copy `.github/workflows/spotify-weekly.yml`, `scripts/spotify_refresh.py`,
-`scripts/spotify_auth.py`, and `config/playlists.json` into your repo at the same paths.
-Commit those files (NOT any credentials).
+## How weekly scrobbles are used
 
-## Create a Spotify Web API app
+`scripts/lastfm_history.py` requests a paginated, seven-day scrobble window using Last.fm's `user.getrecenttracks` API, with pages of up to 200 tracks. It excludes unconfirmed "now playing" tracks, deduplicates repeated pages, and fails rather than silently truncating unexpectedly large or changing pagination.
 
-1. Visit https://developer.spotify.com/dashboard and create an app. In development mode,
-   Spotify requires Premium and may restrict who can use the app.
-2. Add this Redirect URI: `http://127.0.0.1:8888/callback`.
-3. Save your app's client ID and client secret securely.
-4. Run locally (Python 3.12+):
+Last.fm provides track and artist names, not Spotify URIs. For songs played at least twice, the script searches Spotify's catalogue and only accepts an **unambiguous exact artist + track-title match**, with a limit on the number of catalogue searches. Ambiguous remasters, different versions, and unmatched songs are skipped. Spotify is used separately to inspect the five existing playlists, verify ownership, and append up to seven qualifying new tracks per playlist. There are no removals or replacement playlists.
 
-   ```bash
-   export SPOTIFY_CLIENT_ID='...'
-   export SPOTIFY_CLIENT_SECRET='...'
-   python scripts/spotify_auth.py
-   ```
+All playlist edits are verified by re-reading Spotify. Successful changes are saved to `playlists/*.json`, with dated reports in `reports/` and dated change summaries in `history/`. The workflow avoids commits when nothing changed. Song choices remain conservative: a repeated track must be by an artist already on the target playlist.
 
-   Open its link, authorize your own Spotify account, and paste the full redirect URL.
-   The script prints your refresh token. **Do not share or commit that token.**
-5. In GitHub -> MusicProfile -> Settings -> Secrets and variables -> Actions,
-   add three **repository secrets**:
-   - `SPOTIFY_CLIENT_ID`
-   - `SPOTIFY_CLIENT_SECRET`
-   - `SPOTIFY_REFRESH_TOKEN`
+The report states the observed scrobble count and matching diagnostics. **A complete seven-day API query is not proof Last.fm captured every Spotify play.** No individual Last.fm timestamps or raw scrobble events are committed to this public repository.
 
-## Review playlist IDs
+## Secrets
 
-`config/playlists.json` includes three IDs observed in your Spotify account.
-Focus and Driving are discovered by matching the names of playlists you own. If
-there are zero or multiple matches, set exact playlist IDs in the JSON config.
+In [GitHub Actions secrets](https://github.com/jlilleby/MusicProfile/settings/secrets/actions), configure:
 
-## Try it
+- `LASTFM_API_KEY` — Last.fm API key, read-only for public listening history.
+- `SPOTIFY_CLIENT_ID` — Spotify developer app client ID.
+- `SPOTIFY_CLIENT_SECRET` — Spotify developer app client secret.
+- `SPOTIFY_REFRESH_TOKEN` — Spotify OAuth refresh token with the required playlist scopes.
 
-Go to **Actions -> Weekly Spotify Playlist Refresh -> Run workflow**.
-Leave **apply_changes=false** for the first run. It lists candidate additions but
-never changes Spotify or writes output files.
+Never put values in workflow YAML, commits, issues, or logs. Last.fm username `littletown92` is not a secret.
 
-When the output looks right, run it again with **apply_changes=true**.
-Scheduled runs apply changes. This script *only adds* new songs; it does not remove
-or replace existing playlist tracks. It selects tracks you've played at least twice
-recently AND whose artists already appear in that playlist. Maximum seven additions
-per playlist per run, and no duplicates. A playlist below two hours is reported, but
-never padded with unsuitable songs to reach a target duration.
+## Removed polling workflow and retained archive
 
-After a successful apply, the action commits:
+The old `.github/workflows/spotify-collect.yml` schedule has been deleted. The archived `scripts/spotify_history.py` and encrypted `data/listening-history.enc.json` are retained for historical continuity but **are not used by the new weekly workflow**. They can be archived or removed later if desired; deleting the collector does not retroactively remove old commits.
 
-```
-playlists/*.json    current verified track lists
-history/YYYY-MM-DD.json  aggregate change summary
-reports/YYYY-MM-DD.md   human-readable change report
-```
+## Limits and troubleshooting
 
-## Time zone and reliability
+- Last.fm starts capturing Spotify scrobbles when you connect Spotify scrobbling, not retroactively. Verify the Recent Tracks list in Last.fm.
+- Last.fm syncing interruptions or tracks not scrobbled may create gaps; the workflow cannot guarantee completeness.
+- If `LASTFM_API_KEY` is absent or invalid, the workflow fails safely before writing to Spotify.
+- Spotify's 2026 developer API uses `/playlists/{id}/items` for playlist changes and a maximum search limit of 10.
+- Spotify search matching deliberately skips ambiguous recordings. The weekly run may find many Last.fm scrobbles but no safe additions.
+- Your GitHub repository is public. Playlist snapshots and weekly aggregate reports are public, but raw scrobble histories, exact listen timestamps, and all access secrets are excluded.
+- Manual runs default to dry-run, so they do not change playlists or create commits.
+- Schedule can be delayed or occasionally skipped by GitHub Actions.
 
-GitHub Actions cron schedules use UTC. This workflow has two Monday cron entries
-(02:00 and 03:00 UTC), and skips the one not equal to **04:00 Europe/Oslo**, handling
-DST. GitHub's scheduler may start a run late or even drop one; check the Actions tab.
-Manual runs bypass the time guard. `workflow_dispatch` is read-only by default.
-
-## 30-minute listening collection (added November 2026)
-
-- **Collect Spotify Listening History** runs automatically every 30 minutes and can be run manually under Actions.
-- Each collection reads the available last 50 play events, deduplicates them with secret-keyed hashes, and stores **only per-day song counts** plus keyed deduplication hashes, all encrypted in `data/listening-history.enc.json`.
-- The repository is public: no plaintext individual play events or exact play timestamps are committed. The encryption key is derived from the existing `SPOTIFY_CLIENT_SECRET` GitHub secret; do not disclose it. **Rotating the client secret makes previously encrypted state unreadable unless it is migrated first.**
-- GitHub Actions installs the `cryptography` library. There is no new GitHub secret to configure.
-- Weekly refresh reads the accumulated encrypted listening counts rather than just Spotify's most recent 50 events. The existing Monday 04:00 Europe/Oslo schedule is unchanged.
-- Seven-day coverage requires at least seven days of collection and no polling gap greater than 90 minutes. Even then, Spotify outages, omitted plays, or a very active 30-minute interval can leave gaps.
-- Aggregates use UTC-day buckets, so the first and last day of the weekly window are approximate rather than exact-to-the-minute.
-- The initial week cannot be recovered from Spotify if older plays are no longer exposed. As new events are collected, recommendations become more representative.
-- Scheduled collector runs may create up to approximately 48 small encrypted-state commits per day. GitHub may delay scheduled runs. Both workflows share a concurrency group to avoid overlapping writes.
-
-## Safety and API limitations
-
-- This repository is **public**. Published snapshots disclose the tracks in your
-  playlists, but not timestamps of individual listening events or personal API data.
-- The Spotify recently-played API can return a limited playback window. The report
-  indicates whether the 7-day cutoff was observed. It does **not** claim complete
-  listening history when Spotify has no older results.
-- API calls use Spotify's current playlist `/items` endpoints (2026), not legacy
-  `/tracks` paths.
-- If the playlist's owner doesn't match your Spotify account, it won't be edited.
-- If token refresh fails, or Spotify rejects a request, workflow fails rather than
-  inventing success.
-- The scripts use Python 3.12 and the `cryptography` dependency, and never print credentials.
-- Authorization is separate from the ChatGPT Spotify connector. GitHub Actions
-  cannot reuse ChatGPT's Spotify tokens.
-- A token rotation may require updating the `SPOTIFY_REFRESH_TOKEN` secret.
-
-For questions about API access, see https://developer.spotify.com/documentation/web-api/tutorials/february-2026-migration-guide
+Official API references: https://www.last.fm/api/show/user.getRecentTracks and https://developer.spotify.com/documentation/web-api/reference/search
